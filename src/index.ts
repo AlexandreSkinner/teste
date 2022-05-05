@@ -8,7 +8,7 @@ let dataTermino: Date
 
 // Cria uma data de inicio
 dataInicio = new Date("01/01/2021")
-console.log( 'Exemplo 01 - Data de inicio')
+console.log( 'Exemplo 01 - Cria uma data de inicio')
 console.log(dataInicio)
 
 // Adiciona 1 ano na data informada
@@ -23,7 +23,7 @@ console.log(result)
 
 // Teste decremento de 12 mese a uma data
 console.log(' ')
-console.log('Exemplo 03 - Um ano antes a 01/01/2021')
+console.log('Exemplo 03 - Obtem data anterior a 01/01/2021 12 meses')
 const result2 = add(new Date("01/01/2021"), {
     months: -12,
   
@@ -69,9 +69,10 @@ console.log(format(result5, 'dd/MM/yyyy'))
 
 // Obter a data do ultimo dia do mes
 console.log(' ')
-console.log('Exemplo 09 - Obtem ultimo dia do mês')
-const today = new Date(new Date("01/01/2021"));
-console.log(lastDayOfMonth(today) );
+console.log('Exemplo 09 - Obtem ultimo dia do mês - 01/01/2021')
+const today = new Date("01/01/2021");
+console.log(lastDayOfMonth(today));
+console.log(getDate(lastDayOfMonth(today)));
 
 // Soma tres dias a uma data
 console.log(' ')
@@ -111,4 +112,7 @@ console.log(dataLegal)
 let diaMes = getDate(dataLegal) +1
 console.log(diaMes)
 
+// Retorna o dia da data 29/01/2012
+console.log(' ');
+console.log('Retorna o dia da data 29/01/2021')
 console.log(getDate(new Date('2012-01-29'))+1)
