@@ -122,21 +122,25 @@ console.log(getDate(new Date('2012-01-29')) + 1)
 // Teste de rotiamento sinamico
 let app: any;
 app = express();
+//app.use(cors());
 app.use(express.json());
 
 let method = 'get';
 let url = '/teste';
-
-app[method](url, async function (req: Request, res: Response) {
-    const output = {
-        "metodo": method,
-        "url": url
+let callback: Function;
+callback = function testeCallback(a: any, b: any): any {
+    return {
+        "metodo": a,
+        "url": b
     };
+};
+app[method](url, async function (req: Request, res: Response) {
+    const output = callback(method, url);
+
     res.json(output);
 });
 
 app.listen(3000, () => {
     console.log("🌍 Server started at http://localhost:3000} !!");
 });
-
 
