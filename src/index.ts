@@ -119,15 +119,15 @@ console.log('Retorna o dia da data 29/01/2021')
 console.log(getDate(new Date('2012-01-29')) + 1)
 
 
-// Teste de rotiamento sinamico
+// Teste de rotiamento dinamico
 let app: any;
 app = express();
-//app.use(cors());
 app.use(express.json());
 
 let method = 'get';
 let url = '/teste';
 let callback: Function;
+
 callback = function testeCallback(a: any, b: any): any {
     return {
         "metodo": a,
