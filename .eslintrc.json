@@ -3,7 +3,7 @@
         "node": true,
         "es2021": true
     },
-    "extends": "standard-with-typescript",
+    "extends": "standard-with-typescript", 
     "overrides": [
     ],
     "parserOptions": {
@@ -22,8 +22,10 @@
         "@typescript-eslint/no-misused-promises": "off",
         "@typescript-eslint/no-namespace": "off",
         "@typescript-eslint/ban-types": "off",
+        "prefer-const": "off",
         //"@typescript-eslint/prefer-as-const": "error",
-        "@typescript-eslint/prefer-as-const": "off",
+        //"@typescript-eslint/prefer-as-const": "off",
+        // "@typescript-eslint/prefer-as-const": "warn",
         "import/export": "off"
     }
 }

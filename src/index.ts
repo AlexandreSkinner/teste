@@ -1,4 +1,4 @@
-/* eslint-disable prefer-const */
+
 // import add from 'date-fns/add'
 // import 'moment/locale/pt-br';
 import { getDate, format, add, parse, addDays, isValid, differenceInDays, addMonths, lastDayOfMonth } from 'date-fns';
@@ -127,12 +127,15 @@ const method = 'get';
 const url = '/teste';
 let callback: Function;
 
+// Declara a função de callback que será executada quando o end point receber uma solicitação http/get
 callback = function testeCallback (a: any, b: any): any {
   return {
     metodo: a,
     url: b
   };
 };
+
+// End point dinamico
 app[method](url, async function (req: Request, res: Response) {
   const output = callback(method, url);
 
