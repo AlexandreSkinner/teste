@@ -11,3 +11,7 @@
 - Obter ultimo dia do mes, uma vez fornecida uma data;
 - Somar dias a uma data;
 - Verificar se uma data é valida (31/02/2022)
+
+# Teste do lin com type script
+
+# Teste de API com end point dinamico
