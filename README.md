@@ -14,4 +14,8 @@
 
 # Teste do lint com typescript
 
+# Teste de acesso de Array
+- Simula um array de campos obrigatórios em um body http;
+- Pesquisa no body se o campo foi informado;
+
 # Teste de API com end point dinamico
