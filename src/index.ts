@@ -118,11 +118,30 @@ console.log(' ');
 console.log('Retorna o dia da data 29/01/2021');
 console.log(getDate(new Date('2012-01-29')) + 1);
 
-// Teste de rotiamento dinamico
+// ---------------------------------
+//   Teste de array
+// ---------------------------------
+console.log('------------ Teste Array ------------');
+const body: any = {
+  name: 'Alexandre',
+  email: 'alexandre@tmassessoria.com.br',
+  password: 123
+};
+const requiredFields = ['name', 'email', 'password', 'passwordConfirmation'];
+for (const field of requiredFields) {
+  console.log(field);
+  console.log(body[field]);
+}
+console.log('------------ Fim Array ------------');
+
+// ---------------------------------
+//   Teste de roteamento dinamico
+// ---------------------------------
 let app: any;
 app = express();
 app.use(express.json());
 
+// Define método, url e função de callback
 const method = 'get';
 const url = '/teste';
 let callback: Function;
